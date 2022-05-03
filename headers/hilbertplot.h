@@ -5,9 +5,6 @@
 #include "datasequence.h"
 #include <utility>
 
-#ifdef QT_CORE
-    #include <QDataStream>
-#endif
 
 class HilbertPlot : public HilbertCurve
 {

@@ -11,7 +11,6 @@
 #include <limits>
 #include <iostream>
 
-#include <QDebug>
 
 /*!
    \class HilbertPlot
@@ -320,7 +319,7 @@ DataSequence HilbertPlot::hpFourierTransform(bool logflag) const
         {
             uint index1 = this->indexOf (x, y);
             uint index2 = this->indexOf (this->width ()-x-1, y);
-            // qDebug() << x << "," << y;
+            
             if(!logflag)
             {
                 wdf=dataoutput[y*(w2+1)+x][0]*dataoutput[y*(w2+1)+x][0]
