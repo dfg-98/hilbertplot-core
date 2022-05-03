@@ -1,0 +1,171 @@
+/*!
+	\headerfile "hilbertdefines.h"
+
+	\title Definitions for HilbertLib
+
+	\brief The header <HilbertDefines> has definition for the primitives
+	types used in HilbertLib, also defines the exceptions throwing in this 
+	library. 
+*/
+
+/*!
+	\typedef hint
+	\relates HPoint
+
+	Synonim for unsinged int. Is used for HPoint coordinates.
+*/
+/*!
+	\typedef hsize
+	\relates HilbertCurve
+
+	Synonim for unsinged int. Is used for HilbertCurve to represent sizes.
+*/
+/*!
+	\typedef hfloat
+	\relates DataSequence
+
+	Synonim for double. Is the value type storage by DataSequence class.
+*/
+/*!
+	\typedef HImage
+	\relates HilbertPlot
+
+	Synonim for std::vector<std::vector<hfloat>>. Is the data type returned by HilbertPlot::generateImage().
+*/
+/*!
+	\enum QuasiSquare::Orientation
+
+	This enum represent the posible orientations of a QuasiSquare.
+
+	\value A Up 
+	\value B Right
+	\value C Down
+	\value D Left
+*/
+
+/*!
+
+	\enum HilbertCurve::CurveType
+
+	Represent the 40 types described in "Hilbert Curves in two dimensions" by E. Estevez-Rams et al.
+
+	\value 	H0 Hilbert Curve
+	\value  H1 Moore Curve
+	\value  H2 Liu1 Curve
+	\value  H3 Liu2 Curve
+	\value  H4 Liu3 Curve
+	\value  H5 Liu4 Curve
+	\value  H6 I1 Curve
+	\value  H7 I2 Curve
+	\value  H8 I3 Curve
+	\value  H9 I4 Curve
+	\value  H10 I5 Curve
+	\value  H11 I6 Curve
+	\value  H12
+	\value  H13
+	\value  H14
+	\value  H15
+	\value  H16
+	\value  H17
+	\value  H18
+	\value  H19
+	\value  H20
+	\value  H21
+	\value  H22
+	\value  H23
+	\value  H24
+	\value  H25
+	\value  H26
+	\value  H27
+	\value  H28
+	\value  H29
+	\value  H30
+	\value  H31
+	\value  H32
+	\value  H33
+	\value  H34
+	\value  H35
+	\value  H36
+	\value  H37
+	\value  H38
+	\value  H39
+*/
+/*!
+	\class HilbertBadAlloc
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when an operation could not allocate memory properly.
+*/
+/*!
+	\class HilbertBadOrientation
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when an invalid QuasiSquare::Operation is proccessed. 
+	This excpetion shouldn't be raised. If detected something critical is happening.
+*/
+/*!
+	\class HilbertBadOperation
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when invalid values are used for perform some operations on DataSequence.
+*/
+/*!
+	\class HilbertIndexOutOfRange
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when trying to access an invalid index.
+*/
+/*!
+	\class HilbertZeroDivision
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when division by zero is detected.
+*/
+/*!
+	\class HilbertBadSize
+	\inmodule hilbertlib
+	\ingroup HilbertException
+
+	This exception is thrown when wrong size arguments are given. Should be checked emty DataSequence on functions that don't allow it..
+*/
+
+
+/*!
+    \module hilbertlib
+    \title Hilbert Plot Library
+    \ingroup modules
+
+    \brief Hilbert Plot Library provide classes for compute HilbertCurves and associate them a DataSequence creating
+    	HilbertPlot. 
+
+    In order to use this library you should include in your code. 
+    For C++, to include the definitions of the module's classes, use the
+    following directive:
+
+    \code
+        #include <HilbertPlot>
+    \endcode
+
+    Somtimes you should especified the path, if your installation didn't export properly the HILBERT_PATH to 
+    system PATHs. In that case try:
+
+    \code
+        #include <hilbert/HilbertPlot>
+    \endcode
+
+    And for linking against the library you should add to MakeFile:
+    \code
+        LIBS += -lhilbertplot
+    \endcode
+    If you are using qmake, add this to your .pro file:
+    \code
+        LIBS = -lhilbertplot
+    \endcode
+
+*/
+
