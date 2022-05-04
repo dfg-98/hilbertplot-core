@@ -1,0 +1,14 @@
+
+*.pyc
+test_package/build
+
+# Environment
+activate.ps1
+activate.sh
+deactivate.ps1
+deactivate.sh
+environment.ps1.env
+environment.sh.env
+conaninfo.txt
+conanbuildinfo.txt
+build/
