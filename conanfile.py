@@ -12,7 +12,8 @@ class HilbertplotCoreConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
-    generators = "cmake"
+    generators = ["virtualenv", "cmake"]
+    requires = ["cmake/3.16.3", "fftw/3.3.9"]
     exports_sources = "src/*"
 
     def config_options(self):
