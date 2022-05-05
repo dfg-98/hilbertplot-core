@@ -1,0 +1,5 @@
+digraph {
+        "conanfile.py (hilbertplot-core/0.1)" -> "cmake/3.16.3"
+        "conanfile.py (hilbertplot-core/0.1)" -> "fftw/3.3.9"
+        "cmake/3.16.3" -> "openssl/1.1.1k"
+}
